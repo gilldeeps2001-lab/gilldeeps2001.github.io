@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Deep about web development, creative projects and collaborations.">
+  <meta name="theme-color" content="#080b16">
+  <title>Contact | Deep</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #080b16;
+      color: #f5f7ff;
+      line-height: 1.7;
+    }
+    header {
+      padding: 20px;
+      border-bottom: 1px solid #252b43;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+    .logo { color: #78a6ff; font-size: 22px; font-weight: bold; }
+    nav { display: flex; gap: 16px; flex-wrap: wrap; }
+    nav a { color: #d8def5; text-decoration: none; }
+    nav a:hover, nav a.active { color: #78a6ff; }
+    main { max-width: 760px; margin: auto; padding: 65px 22px; }
+    .tag { color: #78a6ff; letter-spacing: 3px; }
+    h1 { font-size: clamp(36px, 7vw, 56px); line-height: 1.2; }
+    .highlight { color: #78a6ff; }
+    .panel {
+      margin-top: 25px;
+      padding: 24px;
+      background: #11172a;
+      border: 1px solid #283353;
+      border-radius: 18px;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 13px;
+      margin: 7px 0 16px;
+      border: 1px solid #354263;
+      border-radius: 9px;
+      background: #080b16;
+      color: white;
+      font: inherit;
+    }
+    button {
+      padding: 12px 20px;
+      border: 0;
+      border-radius: 9px;
+      background: #78a6ff;
+      color: #080b16;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .note { color: #b8c2df; font-size: 14px; }
+    footer { text-align: center; padding: 25px; color: #9da8c8; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">DEEP.</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a class="active" href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <p class="tag">LET'S CONNECT</p>
+    <h1>Contact <span class="highlight">Me.</span></h1>
+    <p>Have an idea, question or project in mind? You can use the form below to prepare an email.</p>
+
+    <section class="panel">
+      <form id="contactForm">
+        <label for="name">Your name</label>
+        <input id="name" name="name" placeholder="Enter your name" required>
+
+        <label for="email">Your email</label>
+        <input id="email" name="email" type="email" placeholder="Enter your email" required>
+
+        <label for="message">Your message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Write your message..." required></textarea>
+
+        <button type="submit">Prepare Email</button>
+        <p class="note">This opens your email app. It does not send anything automatically.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer>© 2026 Deep · Thanks for visiting.</footer>
+
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const message = document.getElementById("message").value.trim();
+
+      const subject = encodeURIComponent("Portfolio message from " + name);
+      const body = encodeURIComponent(
+        "Name: " + name + "\nEmail: " + email + "\n\nMessage:\n" + message
+      );
+
+      // Replace the example address with your own email address.
+      window.location.href = "mailto:YOUR_EMAIL@example.com?subject=" + subject + "&body=" + body;
+    });
+  </script>
+</body>
+</html>
