@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore Deep's projects, creative experiments and web development journey.">
+  <meta name="theme-color" content="#080b16">
+  <title>Projects | Deep</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #080b16;
+      color: #f5f7ff;
+      line-height: 1.7;
+    }
+    header {
+      padding: 20px;
+      border-bottom: 1px solid #252b43;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+    .logo { color: #78a6ff; font-size: 22px; font-weight: bold; }
+    nav { display: flex; gap: 16px; flex-wrap: wrap; }
+    nav a { color: #d8def5; text-decoration: none; }
+    nav a:hover, nav a.active { color: #78a6ff; }
+    main { max-width: 950px; margin: auto; padding: 65px 22px; }
+    .tag { color: #78a6ff; letter-spacing: 3px; }
+    h1 { font-size: clamp(36px, 7vw, 56px); line-height: 1.2; }
+    .highlight { color: #78a6ff; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+      gap: 20px;
+      margin-top: 32px;
+    }
+    .card {
+      padding: 24px;
+      background: #11172a;
+      border: 1px solid #283353;
+      border-radius: 18px;
+    }
+    .card h2 { color: #a9c6ff; }
+    .number { color: #78a6ff; font-size: 14px; letter-spacing: 2px; }
+    footer { text-align: center; padding: 25px; color: #9da8c8; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">DEEP.</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a class="active" href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <p class="tag">WHAT I'M BUILDING</p>
+    <h1>My <span class="highlight">Projects.</span></h1>
+    <p>A collection of my digital ideas, experiments and learning journey.</p>
+
+    <section class="grid">
+      <article class="card">
+        <p class="number">PROJECT 01</p>
+        <h2>Personal Portfolio</h2>
+        <p>A personal website to introduce myself and share my work with the world.</p>
+        <p>Status: In progress</p>
+      </article>
+
+      <article class="card">
+        <p class="number">PROJECT 02</p>
+        <h2>AI Video Experiments</h2>
+        <p>Exploring AI-powered video creation and creative storytelling.</p>
+        <p>Status: Learning</p>
+      </article>
+
+      <article class="card">
+        <p class="number">PROJECT 03</p>
+        <h2>Future Ideas</h2>
+        <p>A space for upcoming websites, creative concepts and technology experiments.</p>
+        <p>Status: Coming soon</p>
+      </article>
+    </section>
+  </main>
+
+  <footer>© 2026 Deep · Always learning.</footer>
+</body>
+</html>
