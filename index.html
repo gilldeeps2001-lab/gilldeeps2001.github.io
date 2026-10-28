@@ -60,12 +60,59 @@
       nav a { margin-left: 9px; font-size: 13px; }
       section { padding: 50px 6%; }
       .hero { padding: 75px 6%; }
-    }
+    
+    .logo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.logo-mark {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #478cff;
+  border-radius: 14px 4px 14px 4px;
+  background: linear-gradient(135deg, #142e64, #22164d);
+  color: #70dfff;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.logo-text strong {
+  color: #f5f7ff;
+  font-size: 21px;
+  letter-spacing: 3px;
+}
+
+.logo-text strong span {
+  color: #718bff;
+}
+
+.logo-text small {
+  color: #aab5d2;
+  font-size: 9px;
+  letter-spacing: 2px;
+}}
   </style>
 </head>
 <body>
   <nav>
-    <div class="logo">Deep.</div>
+    <div class="logo">
+  <div class="logo-mark">DG</div>
+  <div class="logo-text">
+    <strong>DEEP <span>GILL</span></strong>
+    <small>LEARN / BUILD / GROW</small>
+  </div>
+</div>
     <div>
       <a href="about.html">About</a>
       <a href="#skills">Skills</a>
